@@ -27,7 +27,7 @@ int main() {
 
     vector<int> arr(n);
     cout << "Digite os elementos separados por espaço: ";
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i <= n; i++) {
         cin >> arr[i];
     }
 
