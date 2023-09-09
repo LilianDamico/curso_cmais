@@ -3,52 +3,56 @@
 using namespace std;
 
 int main() {
-    double num1, num2, num3;
+    double a, b, c;
 
     // Solicita ao usuário que insira os três números
     cout << "Digite o primeiro número: ";
-    cin >> num1;
+    cin >> a;
 
     cout << "Digite o segundo número: ";
-    cin >> num2;
+    cin >> b;
 
     cout << "Digite o terceiro número: ";
-    cin >> num3;
+    cin >> c;
 
-    double menor, meio, maior;
+    double lit, bet, big;
 
-    // Ordena os números em ordem crescente
-    if (num1 <= num2 && num1 <= num3) {
-        menor = num1;
-        if (num2 <= num3) {
-            meio = num2;
-            maior = num3;
+    if (a <= b && a <= c) {
+        lit = a;
+        if (b <= c) {
+            bet = b;
+            big = c;
         } else {
-            meio = num3;
-            maior = num2;
+            bet = c;
+            big = b;
         }
-    } else if (num2 <= num1 && num2 <= num3) {
-        menor = num2;
-        if (num1 <= num3) {
-            meio = num1;
-            maior = num3;
+    } else if (b <= a && b <= c) {
+        lit = b;
+        if (a <= c) {
+            bet = a;
+            big = c;
         } else {
-            meio = num3;
-            maior = num1;
+            bet = c;
+            big = a;
         }
     } else {
-        menor = num3;
-        if (num1 <= num2) {
-            meio = num1;
-            maior = num2;
+        lit = c;
+        if (a <= b) {
+            bet = a;
+            big = b;
         } else {
-            meio = num2;
-            maior = num1;
-        }
+            bet = b;
+            big = a;
+        }        
     }
 
-    // Exibe os números em ordem crescente
-    cout << "Números em ordem crescente: " << menor << ", " << meio << ", " << maior << endl;
+    cout << "Números em ordem crescente: " << lit << ", " << bet << ", " << big << endl;
+
+    
+
+    if (a == b && b == c) {
+        cout<< "Os numeros são todos iguais " << a << ", " << b << " e " << c << endl;
+    }
 
     return 0;
 }
